@@ -23,7 +23,7 @@
     align-items: center;
     justify-content: center;
     padding: 0 10%;
-    background: linear-gradient(135deg, rgba(17, 16, 16, 0.9), rgba(9, 69, 7, 0.7)); /* Gradient from #111010 to dark green */
+    background: linear-gradient(135deg, rgba(17, 16, 16, 0.9), rgba(4, 16, 2, 0.7)); /* Gradient from #111010 to dark green */
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.4); /* Green glow */
 }
 
@@ -129,7 +129,7 @@
     height: 300px;
     border-radius: 70%;
     object-fit: cover;
-    /* Green border */
+    border: 2px solid green;/* Green border */
     box-shadow: 0 0 15px rgba(7, 7, 7, 0.49); /* Green glow */
 }
 
