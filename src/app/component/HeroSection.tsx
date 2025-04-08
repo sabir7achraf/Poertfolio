@@ -86,15 +86,13 @@ const Hero = () => {
                             Software Engineer crafting scalable, innovative solutions.
                         </p>
                         <div className={styles.buttons}>
-                            <a href="/files/sabir-cv.pdf" download className={styles.button}>
-                <span className={styles.hoverText} data-text="Download CV">
-                  Download CV
-                </span>
+                            <a href="/files/sabir-cv.pdf" download className={`${styles.button} ${styles.buttonLink}`}>
+                                <span className={styles.buttonText}>Download CV</span>
+                                <span className={styles.hoverText} data-text="DownloadCV">Download CV</span>
                             </a>
                             <button className={styles.button}>
-                <span className={styles.hoverText} data-text="Let’s Talk">
-                  Let’s Talk
-                </span>
+                                <span className={styles.buttonText}>Let's Talk</span>
+                                <span className={styles.hoverText} data-text="Let's Talk">Let's Talk</span>
                             </button>
                         </div>
                         <div className={styles.socialLinks}>
