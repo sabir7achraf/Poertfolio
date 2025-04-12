@@ -1,30 +1,20 @@
 .terminal {
-    background-color: #0a0a0a;
-    color: #00ff00;
-    font-family: 'Courier New', Courier, monospace;
-    padding: 0; /* Remove padding here, we'll handle it in terminalContent */
-    border: 2px solid #00ff00;
-    border-radius: 4px;
-    width: 80%;
-    max-width: 600px;
-    height: 250px;
+    width: 600px;
+    max-width: 90%;
+    height: 400px;
+    margin: 100px auto;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     overflow: hidden;
-    white-space: pre-wrap;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-    display: flex;
-    flex-direction: column; /* Stack titlebar and content vertically */
+    font-family: "Courier New", monospace;
+    position: relative;
 }
 
 .titlebar {
-    background-color: #1a1a1a; /* Slightly lighter than terminal bg */
-    height: 20px; /* Thin titlebar */
+    height: 30px;
+    background-color: #333;
     display: flex;
-    justify-content: flex-end; /* Icons on the right */
     align-items: center;
     padding: 0 10px;
 }
@@ -34,27 +24,36 @@
 .iconClose {
     width: 12px;
     height: 12px;
-    margin-left: 8px; /* Space between icons */
-    display: inline-block;
+    border-radius: 50%;
+    margin-right: 8px;
 }
 
 .iconMinimize {
-    background-color: #ffbf00; /* Yellow for minimize */
-    border-radius: 50%; /* Circle */
+    background-color: #ffbd2e;
 }
 
 .iconMaximize {
-    background-color: #00ff00; /* Green for maximize */
-    border-radius: 50%;
+    background-color: #28c940;
 }
 
 .iconClose {
-    background-color: #ff0000; /* Red for close */
-    border-radius: 50%;
+    background-color: #ff5f56;
 }
 
 .terminalContent {
-    padding: 20px; /* Move padding here from .terminal */
-    flex-grow: 1; /* Take up remaining space */
-    margin: 0; /* Remove default pre margins */
+    color: #37ff8b;
+    padding: 20px;
+    height: calc(100% - 30px);
+    overflow: auto;
+    margin: 0;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+@media (max-width: 768px) {
+    .terminal {
+        width: 90%;
+        height: 300px;
+        margin: 50px auto;
+    }
 }
