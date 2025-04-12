@@ -1,31 +1,32 @@
 .container {
     min-height: 100vh;
-    background-color: #111010; /* From your Hero theme */
+    background: linear-gradient(135deg, rgba(17, 16, 16, 0.9), rgba(4, 16, 2, 0.7)); /* Gradient from #111010 to dark green */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.4); /* Green glow *//* From your Hero theme */
 }
 
 .projects {
     padding: 50px 10%;
-    background: linear-gradient(to bottom, #111010, #0D2B0A); /* Gradient from previous suggestion */
+   /* background: linear-gradient(to bottom, #111010, #0D2B0A); Gradient from previous suggestion */
 }
 
 .timeline {
     padding: 50px 10%;
-    background: linear-gradient(to bottom, #0D2B0A, #094507);
+   /* background: linear-gradient(to bottom, #0D2B0A, #094507);*/
 }
 
 .certifications {
     padding: 50px 10%;
-    background: linear-gradient(to bottom, #094507, #056004);
+    /* background: linear-gradient(to bottom, #094507, #056004);*/
 }
 
 .tools {
     padding: 50px 10%;
-    background: linear-gradient(to bottom, #056004, #093909);
+    /* background: linear-gradient(to bottom, #056004, #093909); */
 }
 
 .contact {
     padding: 50px 10%;
-    background-color: #053005; /* Full green */
+   /* background-color: #053005; /* Full green */
 }
 
 .timelineContainer {
