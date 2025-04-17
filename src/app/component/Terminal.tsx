@@ -12,7 +12,7 @@ const Terminal = ({ onComplete }: TerminalProps) => {
     const fullText = [
         'sabir@portfolio:~$ whoami',
         'Name: Sabir Achraf',
-        'Age: 25',
+        'Age: 22',
         'Role: Software Engineer',
         'sabir@portfolio:~$ Loading portfolio...',
     ];

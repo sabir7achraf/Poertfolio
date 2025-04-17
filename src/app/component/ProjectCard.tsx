@@ -11,7 +11,7 @@ interface ProjectCardProps {
     image?: string
     technologies?: string[]
     githubUrl?: string
-    liveUrl?: string
+    demo?: string
 }
 
 export default function ProjectCard({
@@ -20,7 +20,7 @@ export default function ProjectCard({
                                         image = "/placeholder.svg?height=300&width=500",
                                         technologies = ["Next.js", "TypeScript", "Tailwind CSS"],
                                         githubUrl,
-                                        liveUrl,
+                                        demo,
                                     }: ProjectCardProps) {
     const [isHovered, setIsHovered] = useState(false)
 
@@ -73,9 +73,9 @@ export default function ProjectCard({
                             <GithubIcon size={18} />
                         </a>
                     )}
-                    {liveUrl && (
+                    {demo && (
                         <a
-                            href={liveUrl}
+                            href={demo}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="p-2 rounded-full bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] text-white hover:bg-[rgba(55,255,139,0.1)] hover:border-[rgba(55,255,139,0.3)] transition-all duration-300"

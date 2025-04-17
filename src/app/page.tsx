@@ -55,23 +55,26 @@ export default function Home() {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                                 <ProjectCard
-                                    title="Portfolio Website"
-                                    description="A personal portfolio built with Next.js and TypeScript showcasing my projects and skills."
-                                    technologies={["Next.js", "TypeScript", "Tailwind CSS"]}
+                                    image="/images/oracle.jpeg"
+                                    title="Oracle DataBase simulations"
+                                    description="Simulations of oracle database fonctionalité like CRUD for users ,RMAN ,TDE , VPD , rapports AWR/ASH "
+                                    technologies={["Next.js", "TypeScript", "Tailwind CSS","spring boot "]}
                                     githubUrl="https://github.com/username/portfolio"
-                                    liveUrl="https://portfolio.example.com"
+                                    demo="https://www.linkedin.com/posts/achraf-sabir7_oracledatabase-daezveloppement-basededonnaezes-activity-7288787552042405888-qxif?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEcFeVIBQU3UsxytK90UUkcQlw-rkFDiT08"
                                 />
                                 <ProjectCard
-                                    title="E-Commerce Platform"
-                                    description="A full-stack e-commerce solution with product management, cart functionality, and payment integration."
-                                    technologies={["React", "Node.js", "MongoDB", "Stripe"]}
-                                    githubUrl="https://github.com/username/ecommerce"
-                                />
+                                    image="/images/fintech.png"
+                                    title="Fintech  Platform"
+                                    description="cloud-native FinTech application designed to deliver secure, efficient, and scalable financial services. The application is based on a microservices architecture and includes predictive models for loan approval and insurance management. It also provides separate frontend applications for admin and client dashboards.   "
+                                    technologies={["Docker ", "Kubernetes ", "Terraform", "Aws"]}
+                                    githubUrl="https://github.com/projet-fintech"
+                                    demo= "https://www.linkedin.com/posts/achraf-sabir7_aws-kubernetes-devops-activity-7289545222370279424-wk05?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEcFeVIBQU3UsxytK90UUkcQlw-rkFDiT08"/>
+
                                 <ProjectCard
                                     title="AI Content Generator"
                                     description="An application that leverages AI to generate content for various purposes including blog posts and social media."
                                     technologies={["Python", "TensorFlow", "Flask", "React"]}
-                                    liveUrl="https://ai-generator.example.com"
+                                    demo="https://ai-generator.example.com"
                                 />
                             </div>
                         </div>
