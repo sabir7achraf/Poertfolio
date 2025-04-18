@@ -19,7 +19,7 @@ import {
     CloudIcon,
     LayoutIcon,
     BoxIcon,
-    GitBranchIcon,
+    GitBranchIcon, Users,
 } from "lucide-react"
 
 export default function Home() {
@@ -71,12 +71,20 @@ export default function Home() {
                                     demo= "https://www.linkedin.com/posts/achraf-sabir7_aws-kubernetes-devops-activity-7289545222370279424-wk05?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEcFeVIBQU3UsxytK90UUkcQlw-rkFDiT08"/>
 
                                 <ProjectCard
-                                    title="AI Content Generator"
-                                    description="An application that leverages AI to generate content for various purposes including blog posts and social media."
-                                    technologies={["Python", "TensorFlow", "Flask", "React"]}
-                                    demo="https://ai-generator.example.com"
+                                    image="/images/2.png"
+                                    title="Ruby Adventure Game"
+                                    description="We are developing a 2D game in which we've implemented both the A* and Dijkstra algorithms. The player must avoid the enemies, while the enemies use pathfinding to follow the optimal route and catch the player."
+                                    technologies={["Unity", "C#"]}
+                                    githubUrl="https://github.com/sabir7achraf/GameUnity"
                                 />
                             </div>
+                            <a
+                                href="https://github.com/sabir7achraf"
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-[rgba(55,255,139,0.1)] border border-[rgba(55,255,139,0.3)] rounded-lg text-white hover:bg-[rgba(55,255,139,0.2)] transition-all duration-300"
+                            >
+                                <Users size={18} />
+                                <span>See more</span>
+                            </a>
                         </div>
                     </section>
 
@@ -104,28 +112,22 @@ export default function Home() {
                                 <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-[rgba(55,255,139,0.2)] via-[rgba(55,255,139,0.8)] to-[rgba(55,255,139,0.2)]"></div>
 
                                 <TimelineItem
-                                    date="2018 - 2022"
-                                    title="Bachelor's in Computer Science"
-                                    institution="University Name"
-                                    description="Focused on software engineering, algorithms, and data structures. Graduated with honors."
+                                    date="2023 - present"
+                                    title="Software Enginner"
+                                    institution="Faculty of science and technologies Tangier"
+                                    description="Software Enginner"
                                     position="left"
                                 />
 
                                 <TimelineItem
-                                    date="2016 - 2018"
-                                    title="High School Diploma"
-                                    institution="School Name"
-                                    description="Advanced courses in mathematics and computer science."
+                                    date="2021 - 2023"
+                                    title="DEUST"
+                                    institution="Faculty of science and Technologies AL Hoceima"
+                                    description="Diploma of University Studies In Science and Technology (MIP)"
                                     position="right"
                                 />
 
-                                <TimelineItem
-                                    date="2015 - 2016"
-                                    title="Web Development Bootcamp"
-                                    institution="Tech Academy"
-                                    description="Intensive training in full-stack web development technologies."
-                                    position="left"
-                                />
+
                             </div>
                         </div>
                     </section>
@@ -151,6 +153,7 @@ export default function Home() {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                                 <CertificationItem
+                                    imageUrl="/images/certif1_page-0001.jpg"
                                     title="AWS Certified Solutions Architect"
                                     issuer="Amazon Web Services"
                                     date="Issued Jan 2023"
