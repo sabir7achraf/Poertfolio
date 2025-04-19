@@ -10,7 +10,7 @@ import CertificationItem from "@/app/component/certification"
 import ToolItem from "@/app/component/toolItem"
 import ContactForm from "@/app/component/contactForm"
 import QuoteSection from "@/app/component/QuotasSection"
-import ClientsSection from "@/app/component/clientSection"
+
 import {
     CodeIcon,
     DatabaseIcon,
@@ -19,7 +19,7 @@ import {
     CloudIcon,
     LayoutIcon,
     BoxIcon,
-    GitBranchIcon, Users,
+    GitBranchIcon, FileAxis3d ,
 } from "lucide-react"
 
 export default function Home() {
@@ -78,13 +78,15 @@ export default function Home() {
                                     githubUrl="https://github.com/sabir7achraf/GameUnity"
                                 />
                             </div>
+                            <div className="mt-12 flex justify-center">
                             <a
                                 href="https://github.com/sabir7achraf"
                                 className="inline-flex items-center gap-2 px-6 py-3 bg-[rgba(55,255,139,0.1)] border border-[rgba(55,255,139,0.3)] rounded-lg text-white hover:bg-[rgba(55,255,139,0.2)] transition-all duration-300"
                             >
-                                <Users size={18} />
+                                <FileAxis3d  size={18} />
                                 <span>See more</span>
                             </a>
+                            </div>
                         </div>
                     </section>
 
@@ -132,8 +134,8 @@ export default function Home() {
                         </div>
                     </section>
 
-                    {/* Clients Section - Added */}
-                    <ClientsSection />
+                    {/* Clients Section - Added <ClientsSection />*/}
+
 
                     {/* Certifications Section */}
                     <section className="py-20 bg-gradient-to-b from-[rgba(5,30,15,0.85)] to-[rgba(5,35,15,0.8)]">
@@ -151,30 +153,28 @@ export default function Home() {
                                 <div className="h-1 w-20 bg-[#37FF8B] mx-auto rounded-full shadow-[0_0_10px_rgba(55,255,139,0.6)]"></div>
                             </motion.div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                                 <CertificationItem
                                     imageUrl="/images/certif1_page-0001.jpg"
-                                    title="AWS Certified Solutions Architect"
-                                    issuer="Amazon Web Services"
-                                    date="Issued Jan 2023"
-                                    credentialUrl="https://www.credly.com/badges/example"
+                                    title="Problim Solving (Basic)"
+                                    issuer="HackerRank"
+                                    date="Issued feb 2025"
+                                    credentialUrl="https://www.hackerrank.com/certificates/iframe/81242bd469f6"
                                 />
                                 <CertificationItem
-                                    title="Google Cloud Professional DevOps Engineer"
+                                    imageUrl="/images/google_loadbalancer.png"
+                                    title="Implement Load Balancing"
                                     issuer="Google Cloud"
-                                    date="Issued Mar 2022"
-                                    credentialUrl="https://www.credential.net/example"
+                                    date="Issued feb 2025"
+                                    credentialUrl="https://www.credly.com/badges/5ee6aafe-ce3d-4278-91a3-58e74a70689f/linked_in_profile"
                                 />
                                 <CertificationItem
-                                    title="Microsoft Certified: Azure Developer Associate"
-                                    issuer="Microsoft"
-                                    date="Issued Jun 2022"
+                                    imageUrl="/images/scienceWeek.jpg"
+                                    title="Science Week"
+                                    issuer="Legends"
+                                    date="Issued Jun 2025"
                                 />
-                                <CertificationItem
-                                    title="Certified Kubernetes Administrator (CKA)"
-                                    issuer="Cloud Native Computing Foundation"
-                                    date="Issued Sep 2021"
-                                />
+
                             </div>
                         </div>
                     </section>

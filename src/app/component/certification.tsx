@@ -60,8 +60,8 @@ export default function CertificationItem({
                             fill
                             className="object-contain hover:scale-105 transition-transform duration-300"
                         />
-                        <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 flex items-center justify-center transition-all duration-300">
-              <span className="opacity-0 group-hover:opacity-100 text-white text-sm font-medium py-1 px-3 rounded-full bg-[rgba(55,255,139,0.2)] transition-opacity duration-300">
+                        <div className="absolute inset-0  bg-opacity-0 hover:bg-opacity-20 flex items-center justify-center transition-all duration-300">
+              <span className="opacity-0 group-hover:opacity-100 text-black text-sm font-medium py-1 px-3 rounded-full bg-[rgba(55,255,10,0.2)] transition-opacity duration-300">
                 {isImageExpanded ? "Click to shrink" : "Click to expand"}
               </span>
                         </div>

@@ -301,7 +301,7 @@ const Hero = () => {
                         {/* Buttons */}
                         <div className="flex flex-wrap gap-6 mt-2">
                             <a
-                                href="/files/sabir-cv.pdf"
+                                href="/files/sabirachraf_cv.pdf"
                                 download
                                 className="group relative overflow-hidden rounded-lg bg-[#37FF8B]/10 border border-[#37FF8B]/20 px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:bg-[#37FF8B]/20 hover:shadow-[0_0_20px_rgba(55,255,139,0.3)]"
                                 onMouseEnter={() => setIsHovering(true)}
@@ -358,7 +358,7 @@ const Hero = () => {
                                 <Github className="w-5 h-5 text-white group-hover:text-[#37FF8B]" />
                             </a>
                             <a
-                                href="https://linkedin.com/in/yourprofile"
+                                href="https://www.linkedin.com/in/achraf-sabir7/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group p-2 rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:bg-[#37FF8B]/10 hover:border-[#37FF8B]/30 hover:scale-110 hover:shadow-[0_0_15px_rgba(55,255,139,0.2)]"
