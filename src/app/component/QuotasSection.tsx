@@ -32,14 +32,14 @@ export default function QuoteSection() {
                         viewport={{ once: true }}
                         className="text-xl md:text-2xl font-light text-gray-200 leading-relaxed mb-8"
                     >
-            <span className="block mb-4">
-              "Start with something simple and small, then expand over time. If people call it a 'toy' you're definitely
-              onto something."
-            </span>
+       <span className="block mb-4">
+  &quot;Start with something simple and small, then expand over time. If people call it a &apos;toy&apos; you&apos;re definitely
+  onto something.&quot;
+</span>
                         <span className="block">
-              "If you're waiting for encouragement from others, you're doing it wrong. By the time people think an idea
-              is good, it's probably too late."
-            </span>
+  &quot;If you&apos;re waiting for encouragement from others, you&apos;re doing it wrong. By the time people think an idea
+  is good, it&apos;s probably too late.&quot;
+</span>
                     </motion.blockquote>
 
                     <motion.div

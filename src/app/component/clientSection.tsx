@@ -53,7 +53,7 @@ export default function ClientsSection() {
                     </h2>
                     <div className="h-1 w-20 bg-[#37FF8B] mx-auto rounded-full shadow-[0_0_10px_rgba(55,255,139,0.6)]"></div>
                     <p className="text-gray-300 mt-4 max-w-2xl mx-auto">
-                        Don't just take my word for it. Here's what clients have to say about working with me.
+                        Don&#39;t just take my word for it. Here&#39;s what clients have to say about working with me.
                     </p>
                 </motion.div>
 
@@ -102,7 +102,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: TestimonialProps
             <div className="flex flex-col h-full">
                 {/* Testimonial content with consistent height */}
                 <div className="mb-6 text-gray-300 italic leading-relaxed flex-grow min-h-32">
-                    "{testimonial.testimonial}"
+                    &#34;{testimonial.testimonial}&#34;
                 </div>
 
                 {/* Bottom section with fixed layout */}

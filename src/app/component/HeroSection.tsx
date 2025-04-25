@@ -1,6 +1,7 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef} from "react"
+import Image from "next/image"
 import * as THREE from "three"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer"
@@ -10,7 +11,7 @@ import { Github, Linkedin, Code2Icon, AwardIcon } from "lucide-react"
 
 const Hero = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null)
-    const [isHovering, setIsHovering] = useState(false)
+
 
     useEffect(() => {
         if (!canvasRef.current) return
@@ -304,8 +305,7 @@ const Hero = () => {
                                 href="/files/sabirachraf_cv.pdf"
                                 download
                                 className="group relative overflow-hidden rounded-lg bg-[#37FF8B]/10 border border-[#37FF8B]/20 px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:bg-[#37FF8B]/20 hover:shadow-[0_0_20px_rgba(55,255,139,0.3)]"
-                                onMouseEnter={() => setIsHovering(true)}
-                                onMouseLeave={() => setIsHovering(false)}
+
                             >
                 <span className="relative z-10 flex items-center gap-2">
                   <span>Download CV</span>
@@ -326,11 +326,10 @@ const Hero = () => {
 
                             <button
                                 className="group relative overflow-hidden rounded-lg bg-transparent border border-white/20 px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:bg-white/5 hover:border-white/30"
-                                onMouseEnter={() => setIsHovering(true)}
-                                onMouseLeave={() => setIsHovering(false)}
+
                             >
                 <span className="relative z-10 flex items-center gap-2">
-                  <span>Let's Talk</span>
+                  <span>Let &apos; s Talk</span>
                   <svg
                       className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
                       viewBox="0 0 20 20"
@@ -389,7 +388,9 @@ const Hero = () => {
                         <div className="relative group">
                             {/* Main Image */}
                             <div className="relative z-10 rounded-2xl overflow-hidden border-2 border-[#37FF8B] shadow-[0_0_30px_rgba(55,255,139,0.3)] transition-all duration-500 group-hover:shadow-[0_0_40px_rgba(55,255,139,0.5)] group-hover:scale-[1.02]">
-                                <img
+                                <Image
+                                    width={320}
+                                    height={320}
                                     src="/images/sabir.jpeg"
                                     alt="Sabir Achraf"
                                     className="w-[280px] h-[280px] md:w-[320px] md:h-[320px] object-cover"
