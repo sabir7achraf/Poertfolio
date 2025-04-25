@@ -12,7 +12,6 @@ import { Github, Linkedin, Code2Icon, AwardIcon } from "lucide-react"
 const Hero = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null)
 
-
     useEffect(() => {
         if (!canvasRef.current) return
 
@@ -131,25 +130,27 @@ const Hero = () => {
             // Animate particles
             const animateParticles = (time: number) => {
                 particles.children.forEach((particle, index) => {
-                    const data = particle.userData
+                    if (particle instanceof THREE.Mesh) {
+                        const data = particle.userData;
 
-                    // Create flowing motion
-                    const orbitRadius = data.radius + Math.sin(time * 0.2 + data.phase) * data.amplitude
-                    const theta = data.theta + time * data.speed * 0.05
-                    const phi = data.phi + Math.sin(time * 0.1 + index) * 0.05
+                        // Create flowing motion
+                        const orbitRadius = data.radius + Math.sin(time * 0.2 + data.phase) * data.amplitude
+                        const theta = data.theta + time * data.speed * 0.05
+                        const phi = data.phi + Math.sin(time * 0.1 + index) * 0.05
 
-                    particle.position.x = orbitRadius * Math.sin(phi) * Math.cos(theta)
-                    particle.position.y = orbitRadius * Math.sin(phi) * Math.sin(theta)
-                    particle.position.z = orbitRadius * Math.cos(phi)
+                        particle.position.x = orbitRadius * Math.sin(phi) * Math.cos(theta)
+                        particle.position.y = orbitRadius * Math.sin(phi) * Math.sin(theta)
+                        particle.position.z = orbitRadius * Math.cos(phi)
 
-                    // Pulse effect
-                    const scale = 0.8 + Math.sin(time * 2 + index * 5) * 0.2
-                    particle.scale.set(scale, scale, scale)
+                        // Pulse effect
+                        const scale = 0.8 + Math.sin(time * 2 + index * 5) * 0.2
+                        particle.scale.set(scale, scale, scale)
 
-                    // Adjust opacity for depth effect
-                    const dist = camera.position.distanceTo(particle.position)
-                    const normalizedDist = Math.max(0, Math.min(1, (10 - dist) / 10))
-                    ;(particle.material as THREE.MeshBasicMaterial).opacity = normalizedDist * 0.8
+                        // Adjust opacity for depth effect
+                        const dist = camera.position.distanceTo(particle.position)
+                        const normalizedDist = Math.max(0, Math.min(1, (10 - dist) / 10))
+                        ;(particle.material as THREE.MeshBasicMaterial).opacity = normalizedDist * 0.8
+                    }
                 })
             }
 
@@ -175,7 +176,16 @@ const Hero = () => {
                     const line = connections.children[0]
                     connections.remove(line)
                     ;(line as THREE.Line).geometry.dispose()
-                    ;(line as THREE.Line).material.dispose()
+                    const material = (line as THREE.Line).material
+                    if (Array.isArray(material)) {
+                        material.forEach((mat) => {
+                            if (mat && typeof mat.dispose === "function") {
+                                mat.dispose()
+                            }
+                        })
+                    } else if (material && typeof material.dispose === "function") {
+                        material.dispose()
+                    }
                 }
 
                 // Dynamic connection distance based on time
@@ -264,8 +274,12 @@ const Hero = () => {
                 if (object instanceof THREE.Mesh) {
                     object.geometry.dispose()
                     if (Array.isArray(object.material)) {
-                        object.material.forEach((material) => material.dispose())
-                    } else {
+                        object.material.forEach((material) => {
+                            if (material && typeof material.dispose === "function") {
+                                material.dispose()
+                            }
+                        })
+                    } else if (object.material && typeof object.material.dispose === "function") {
                         object.material.dispose()
                     }
                 }
@@ -305,7 +319,6 @@ const Hero = () => {
                                 href="/files/sabirachraf_cv.pdf"
                                 download
                                 className="group relative overflow-hidden rounded-lg bg-[#37FF8B]/10 border border-[#37FF8B]/20 px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:bg-[#37FF8B]/20 hover:shadow-[0_0_20px_rgba(55,255,139,0.3)]"
-
                             >
                 <span className="relative z-10 flex items-center gap-2">
                   <span>Download CV</span>
@@ -326,10 +339,9 @@ const Hero = () => {
 
                             <button
                                 className="group relative overflow-hidden rounded-lg bg-transparent border border-white/20 px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:bg-white/5 hover:border-white/30"
-
                             >
                 <span className="relative z-10 flex items-center gap-2">
-                  <span>Let &apos; s Talk</span>
+                  <span>Let &#39; s Talk</span>
                   <svg
                       className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
                       viewBox="0 0 20 20"
